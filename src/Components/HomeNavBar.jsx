@@ -1,24 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../Styles/HomeNavBar.css';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "../Styles/HomeNavBar.css";
+import { FiMenu } from "react-icons/fi";
 
 const HomeNavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => (location.pathname === path ? "active" : "");
+
   return (
-    <nav className="navbar">
-      <ul className="nav-list">
-        <li className="nav-item">
-          <Link to="/" className="nav-link">Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/services" className="nav-link">Services</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/testimonials" className="nav-link">Testimonials</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/contact" className="nav-link">Contact Us</Link>
-        </li>
-      </ul>
+    <nav className="navigation-bar">
+      <div className="nav-logo">
+        <Link to="/">
+          <img
+            src={`${process.env.PUBLIC_URL}/twlogotransparent.png`}
+            alt="TradeWing Logo"
+            className="nav-logo-img"
+          />
+        </Link>
+      </div>
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        <FiMenu />
+      </div>
+      <div className={`nav-buttons ${menuOpen ? "show-menu" : ""}`}>
+        <Link to="/" className={`nav-link ${isActive("/")}`}>
+          Home
+        </Link>
+        <Link to="/services" className={`nav-link ${isActive("/services")}`}>
+          Services
+        </Link>
+        <Link to="/testimonials" className={`nav-link ${isActive("/testimonials")}`}>
+          Testimonials
+        </Link>
+        <Link to="/contact" className={`nav-link ${isActive("/contact")}`}>
+          Contact Us
+        </Link>
+      </div>
     </nav>
   );
 };
