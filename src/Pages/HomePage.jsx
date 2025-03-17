@@ -11,6 +11,7 @@ const HomePage = () => {
   useEffect(() => {
     const createFallingImages = () => {
       const container = document.querySelector(".falling-images");
+      if (!container) return;
       for (let i = 0; i < 10; i++) {
         let img = document.createElement("img");
         img.classList.add("falling-img");
@@ -26,7 +27,7 @@ const HomePage = () => {
 
     return () => {
       const container = document.querySelector(".falling-images");
-      container.innerHTML = "";
+      if (container) container.innerHTML = "";
     };
   }, []);
 
