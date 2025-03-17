@@ -6,6 +6,7 @@ import rupeeImage from "../assets/rupee.png";
 import alokImage from "../assets/papaimage.jpg";
 import logo from "../assets/twlogotransparent.png";
 import { FaWhatsapp } from "react-icons/fa";
+import { FiPhoneCall } from "react-icons/fi";
 
 const HomePage = () => {
   useEffect(() => {
@@ -33,6 +34,14 @@ const HomePage = () => {
 
   return (
     <div className="home-page-wrapper">
+      {/* ✅ All India Support Number */}
+      <div className="support-label">
+      <a
+        href="tel:+919028099326"
+      >
+        📞 All India Support Number: +91-9028099326
+      </a>
+      </div>
       {/* Falling Images */}
       <div className="falling-images"></div>
 
@@ -200,6 +209,15 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      {/* ✅ Floating Call Button */}
+      <a
+        href="tel:+919028099326"
+        className="call-button"
+      >
+        <FiPhoneCall className="call-icon" />
+        Call Now
+      </a>
 
       {/* WhatsApp Button */}
       <a
