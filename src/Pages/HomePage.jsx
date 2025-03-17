@@ -3,6 +3,7 @@ import "../Styles/HomePage.css";
 import stockImage from "../assets/stockhome.png";
 import dollarImage from "../assets/dollar.png";
 import rupeeImage from "../assets/rupee.png";
+import alokImage from "../assets/papaimage.jpg";
 import logo from "../assets/twlogotransparent.png";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -114,6 +115,87 @@ const HomePage = () => {
                 <li>🎯 Anyone seeking financial independence.</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* About Alok Baronia Section */}
+      <div className="about-alok">
+        <div className="about-alok-container">
+          <h2 className="alok-title">About Alok Baronia</h2>
+          <div className="alok-image-wrapper">
+            <img src={alokImage} alt="Alok Baronia" className="alok-image" />
+          </div>
+          <div className="alok-content">
+            <p className="alok-description">
+              Alok Baronia is a seasoned financial expert with an illustrious
+              career spanning 25 years in banking, investments, and the financial
+              domain. With 14 years of successful trading experience, he has
+              mastered the art of technical analysis and wealth creation using
+              time-tested tools and strategies.
+            </p>
+            <p className="alok-description">
+              As the founder and mentor of Trade Wing Trading Academy, Alok is
+              on a mission to train aspiring traders and investors in stock
+              market trading, from basics to advanced levels. His structured
+              training programs focus on technical analysis, price action, risk
+              management, and smart trading strategies, equipping learners with
+              the knowledge and confidence to navigate the markets effectively.
+            </p>
+            <p className="alok-description">
+              With a deep-rooted belief in wisdom-based trading, Alok specializes 
+              in chart pattern analysis, market trends, and advanced indicators, 
+              helping individuals make informed and profitable trading decisions.
+              His approach blends traditional techniques with modern innovations,
+              ensuring that traders stay ahead in the dynamic financial markets.
+            </p>
+            <p className="alok-description">
+              Through his academy, he has been instrumental in shaping numerous 
+              success stories, helping individuals learn, earn, and achieve financial 
+              independence. His interactive training sessions, live market case studies, 
+              and personalized mentorship set him apart as a dedicated guide and support 
+              system for all those associated with him.
+            </p>
+            <p className="alok-description">
+              Alok’s commitment to financial literacy, wealth creation, and
+              trader empowerment makes him a highly respected figure in the stock
+              market training community. Whether you're a beginner or an
+              experienced trader, his expertise and mentorship can transform your
+              market journey into a path of consistent success.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Presence Section */}
+      <div className="our-presence">
+        <h2 className="presence-title">Our Presence</h2>
+        <div className="presence-container">
+          {/* Pune */}
+          <div className="presence-card">
+            <h3 className="city-name">Pune</h3>
+            <p className="address">
+              📍 <strong>Add-1:</strong> B-206, Royal Entrada Bhumkar Chowk Wakad, Pune-411057
+            </p>
+            <p className="address">
+              📍 <strong>Add-2:</strong> B-602, Mont Vert Dieu, Sus Road Pashan, Pune-411017
+            </p>
+          </div>
+
+          {/* Nagpur */}
+          <div className="presence-card">
+            <h3 className="city-name">Nagpur</h3>
+            <p className="address">
+              📍 J-801, Jayanti Nagri VII, Besa Square, Nagpur-440024
+            </p>
+          </div>
+
+          {/* Hyderabad */}
+          <div className="presence-card">
+            <h3 className="city-name">Hyderabad</h3>
+            <p className="address">
+              📍 D-1104, Rainbow Vistas, Moosapet, Hyderabad-500018
+            </p>
           </div>
         </div>
       </div>
