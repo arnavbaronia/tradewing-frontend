@@ -175,10 +175,10 @@ const HomePage = () => {
           <div className="presence-card">
             <h3 className="city-name">Pune</h3>
             <p className="address">
-              📍 <strong>Add-1:</strong> B-206, Royal Entrada Bhumkar Chowk Wakad, Pune-411057
+              📍 <strong>Add-1:</strong> B-206, Royal Entrada, Bhumkar Chowk, Wakad, Pune-411057
             </p>
             <p className="address">
-              📍 <strong>Add-2:</strong> B-602, Mont Vert Dieu, Sus Road Pashan, Pune-411017
+              📍 <strong>Add-2:</strong> B-602, Mont Vert Dieu, Sus Road, Pashan, Pune-411017
             </p>
           </div>
 

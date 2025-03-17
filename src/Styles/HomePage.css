@@ -120,6 +120,7 @@ body {
     flex-direction: column;
     padding: 20px;
     height: auto;
+    padding-top: 100px;
   }
 
   .home-content {
