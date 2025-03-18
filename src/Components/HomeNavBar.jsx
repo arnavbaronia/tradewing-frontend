@@ -36,6 +36,9 @@ const HomeNavBar = () => {
         <Link to="/contact" className={`nav-link ${isActive("/contact")}`}>
           Contact Us
         </Link>
+        <Link to="/refer" className={`nav-link ${isActive("/refer")}`}>
+          Refer a Friend
+        </Link>
       </div>
     </nav>
   );
