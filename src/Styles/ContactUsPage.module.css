@@ -6,6 +6,8 @@
   background-color: #f4f5f7;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
 .contactHeader {
@@ -221,7 +223,7 @@
 
 .callButton {
   position: fixed;
-  bottom: 80px;
+  bottom: 95px !important; 
   right: 20px;
   background-color: #3e34c7;
   color: white;
@@ -230,8 +232,8 @@
   display: flex;
   align-items: center;
   font-size: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001; 
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -247,7 +249,7 @@
 
 .whatsappButton {
   position: fixed;
-  bottom: 20px;
+  bottom: 40px !important; 
   right: 20px;
   background-color: #25D366;
   color: white;
@@ -256,8 +258,8 @@
   display: flex;
   align-items: center;
   font-size: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; 
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -386,11 +388,20 @@
     padding: 4px 10px;
   }
 
-  .callButton,
-  .whatsappButton {
+  .callButton {
+    bottom: 80px; 
+    right: 20px;
     font-size: 12px;
     padding: 8px 14px;
-    bottom: 40px;
+    z-index: 1001; 
+  }
+
+  .whatsappButton {
+    bottom: 20px; 
+    right: 20px;
+    font-size: 12px;
+    padding: 8px 14px;
+    z-index: 1000; 
   }
 
   .callIcon,
