@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FiPhoneCall } from 'react-icons/fi';
 import styles from '../Styles/TestimonialsPage.module.css';
 import client1 from '../assets/client1.png';
 import client2 from '../assets/client2.png';
+import dollarImage from '../assets/dollar.png';
+import rupeeImage from '../assets/rupee.png';
 
 const testimonials = [
   {
@@ -50,40 +54,101 @@ const testimonials = [
 ];
 
 const TestimonialsPage = () => {
+  useEffect(() => {
+    const createFallingImages = () => {
+      const container = document.querySelector(`.${styles.fallingImages}`);
+      if (!container) return;
+      for (let i = 0; i < 10; i++) {
+        let img = document.createElement('img');
+        img.classList.add(styles.fallingImg);
+        img.src = Math.random() > 0.5 ? dollarImage : rupeeImage;
+        img.style.left = `${Math.random() * 100}vw`;
+        img.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        img.style.animationDelay = `${Math.random() * 5}s`;
+        container.appendChild(img);
+      }
+    };
+
+    createFallingImages();
+
+    return () => {
+      const container = document.querySelector(`.${styles.fallingImages}`);
+      if (container) container.innerHTML = '';
+    };
+  }, []);
+
   return (
     <div className={styles.testimonialsWrapper}>
+      {/* ✅ All India Support Number */}
+      <div className={styles.supportLabel}>
+        <a href="tel:+919028099326">
+          📞 All India Support Number: +91-9028099326
+        </a>
+      </div>
+
+      {/* ✅ Falling Images */}
+      <div className={styles.fallingImages}></div>
+
       <h1 className={styles.heading}>What Our Clients Say</h1>
       <div className={styles.starsContainer}>
         {[...Array(5)].map((_, index) => (
-          <Star 
-            key={index} 
-            className={styles.starIcon} 
-            fill="#f4b400" 
-            stroke="#f4b400" 
+          <Star
+            key={index}
+            className={styles.starIcon}
+            fill="#f4b400"
+            stroke="#f4b400"
           />
         ))}
       </div>
       <p className={styles.description}>
-        Our clients have experienced incredible transformations with Trade Wing! From understanding market trends to making confident trades,
+        Our clients have experienced incredible transformations with Trade Wing!
+        From understanding market trends to making confident trades,
         <br />
-        their stories highlight the value of proper training and guidance. Read their experiences and see how Trade Wing can help you too!
+        their stories highlight the value of proper training and guidance. Read
+        their experiences and see how Trade Wing can help you too!
       </p>
       <div className={styles.reviewsContainer}>
         {testimonials.map((testimonial, index) => (
           <div key={index} className={styles.reviewCard}>
             <div className={styles.avatarContainer}>
-              <img src={testimonial.avatar} alt={testimonial.name} className={styles.avatar} />
+              <img
+                src={testimonial.avatar}
+                alt={testimonial.name}
+                className={styles.avatar}
+              />
             </div>
             <div className={styles.reviewContent}>
               <span className={styles.name}>{testimonial.name}</span>
               <p className={styles.reviewText}>{testimonial.review}</p>
-              <a href={testimonial.link} target="_blank" rel="noopener noreferrer" className={styles.reviewLink}>
+              <a
+                href={testimonial.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.reviewLink}
+              >
                 Read Full Review
               </a>
             </div>
           </div>
         ))}
       </div>
+
+      {/* ✅ Floating Call Button */}
+      <a href="tel:+919028099326" className={styles.callButton}>
+        <FiPhoneCall className={styles.callIcon} />
+        Call Now
+      </a>
+
+      {/* ✅ WhatsApp Button */}
+      <a
+        href="https://wa.me/+919028099326"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.whatsappButton}
+      >
+        <FaWhatsapp className={styles.whatsappIcon} />
+        Chat on WhatsApp
+      </a>
     </div>
   );
 };
