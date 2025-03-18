@@ -8,6 +8,7 @@ const ContactUsPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    contactNumber: '',
     message: ''
   });
 
@@ -30,7 +31,7 @@ const ContactUsPage = () => {
       .then(
         () => {
           setNotification({ message: 'Message sent successfully!', type: 'success' });
-          setFormData({ name: '', email: '', message: '' });
+          setFormData({ name: '', email: '', contactNumber: '', message: '' });
 
           setTimeout(() => setNotification({ message: '', type: '' }), 3000);
         },
@@ -61,9 +62,7 @@ const ContactUsPage = () => {
 
       {/* ✅ All India Support Number */}
       <div className={styles.supportLabel}>
-        <a href="tel:+919028099326">
-            📞 All India Support Number: +91-9028099326
-        </a>
+        <a href="tel:+919028099326">📞 All India Support Number: +91-9028099326</a>
       </div>
 
       <div className={styles.contactHeader}>
@@ -76,6 +75,7 @@ const ContactUsPage = () => {
       </div>
 
       <div className={styles.contactContainer}>
+        {/* ✅ Form Section */}
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.row}>
@@ -98,6 +98,18 @@ const ContactUsPage = () => {
                 className={styles.input}
               />
             </div>
+
+            {/* ✅ New Contact Number Field */}
+            <input
+              type="tel"
+              name="contactNumber"
+              placeholder="Your Contact Number"
+              value={formData.contactNumber}
+              onChange={handleChange}
+              required
+              className={styles.input}
+            />
+
             <textarea
               name="message"
               placeholder="Your Message"
@@ -112,6 +124,7 @@ const ContactUsPage = () => {
           </form>
         </div>
 
+        {/* ✅ Contact Options */}
         <div className={styles.contactOptions}>
           <button onClick={() => window.open('https://www.linkedin.com/in/alok-baronia', '_blank')} className={styles.contactButton}>
             <FaLinkedin className={styles.icon} /> LinkedIn
@@ -133,8 +146,9 @@ const ContactUsPage = () => {
           </button>
         </div>
       </div>
+
       {/* ✅ Floating Call Button */}
-            <a href="tel:+919028099326" className={styles.callButton}>
+      <a href="tel:+919028099326" className={styles.callButton}>
         <FiPhoneCall className={styles.callIcon} />
         Call Now
       </a>

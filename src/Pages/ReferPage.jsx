@@ -9,6 +9,7 @@ const ReferFriendPage = () => {
     yourName: '',
     friendName: '',
     friendEmail: '',
+    friendPhone: '',
     message: ''
   });
 
@@ -31,7 +32,7 @@ const ReferFriendPage = () => {
       .then(
         () => {
           setNotification({ message: 'Referral sent successfully!', type: 'success' });
-          setFormData({ yourName: '', friendName: '', friendEmail: '', message: '' });
+          setFormData({ yourName: '', friendName: '', friendEmail: '', friendPhone: '', message: '' });
 
           setTimeout(() => setNotification({ message: '', type: '' }), 3000);
         },
@@ -73,6 +74,7 @@ const ReferFriendPage = () => {
       <div className={styles.contactContainer}>
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
+            {/* Name Row */}
             <div className={styles.row}>
               <input
                 type="text"
@@ -93,15 +95,29 @@ const ReferFriendPage = () => {
                 className={styles.input}
               />
             </div>
-            <input
-              type="email"
-              name="friendEmail"
-              placeholder="Friend's Email"
-              value={formData.friendEmail}
-              onChange={handleChange}
-              required
-              className={styles.input}
-            />
+
+            {/* Email and Phone Row */}
+            <div className={styles.row}>
+              <input
+                type="email"
+                name="friendEmail"
+                placeholder="Friend's Email"
+                value={formData.friendEmail}
+                onChange={handleChange}
+                required
+                className={styles.input}
+              />
+              <input
+                type="tel"
+                name="friendPhone"
+                placeholder="Friend's Contact Number"
+                value={formData.friendPhone}
+                onChange={handleChange}
+                required
+                className={styles.input}
+              />
+            </div>
+
             <textarea
               name="message"
               placeholder="Add a personal message (optional)"

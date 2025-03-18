@@ -67,7 +67,7 @@ const HomePage = () => {
       </div>
 
       {/* About Us Section */}
-      <div className="about-us">
+      <div id="about-us" className="about-us">
         <div className="about-us-content">
           <img src={logo} alt="Trade Wing Logo" className="logo-img" />
           <h2 className="about-title">About Trade Wing Trading Academy</h2>
@@ -178,7 +178,7 @@ const HomePage = () => {
       </div>
 
       {/* Our Presence Section */}
-      <div className="our-presence">
+      <div id="our-presence" className="our-presence">
         <h2 className="presence-title">Our Presence</h2>
         <div className="presence-container">
           {/* Pune */}

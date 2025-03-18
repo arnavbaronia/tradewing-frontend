@@ -1,20 +1,51 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../Styles/HomeNavBar.css";
 import { FiMenu } from "react-icons/fi";
 
 const HomeNavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
-  const isActive = (path) => (location.pathname === path ? "active" : "");
+  const isActive = (path) => {
+    if (path === "/about" && location.hash === "#about-us") return "active";
+    if (path === "/presence" && location.hash === "#our-presence") return "active";
+    return location.pathname === path ? "active" : "";
+  };
 
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    }
+  };
+
+  const handleSectionClick = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+    } else {
+      scrollToSection(sectionId);
+    }
+  };
+
+  const handleHomeClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navigation-bar">
+      {/* Logo */}
       <div className="nav-logo">
         <Link to="/" onClick={handleLinkClick}>
           <img
@@ -24,23 +55,58 @@ const HomeNavBar = () => {
           />
         </Link>
       </div>
+
+      {/* Mobile Menu Icon */}
       <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         <FiMenu />
       </div>
+
+      {/* Nav Links */}
       <div className={`nav-buttons ${menuOpen ? "show-menu" : ""}`}>
-        <Link to="/" className={`nav-link ${isActive("/")}`} onClick={handleLinkClick}>
+        <span
+          className={`nav-link ${isActive("/")}`}
+          onClick={handleHomeClick}
+        >
           Home
-        </Link>
-        <Link to="/services" className={`nav-link ${isActive("/services")}`} onClick={handleLinkClick}>
+        </span>
+        <span
+          className={`nav-link ${isActive("/about")}`}
+          onClick={() => handleSectionClick("about-us")}
+        >
+          About
+        </span>
+        <span
+          className={`nav-link ${isActive("/presence")}`}
+          onClick={() => handleSectionClick("our-presence")}
+        >
+          Our Presence
+        </span>
+        <Link
+          to="/services"
+          className={`nav-link ${isActive("/services")}`}
+          onClick={handleLinkClick}
+        >
           Services
         </Link>
-        <Link to="/testimonials" className={`nav-link ${isActive("/testimonials")}`} onClick={handleLinkClick}>
+        <Link
+          to="/testimonials"
+          className={`nav-link ${isActive("/testimonials")}`}
+          onClick={handleLinkClick}
+        >
           Testimonials
         </Link>
-        <Link to="/contact" className={`nav-link ${isActive("/contact")}`} onClick={handleLinkClick}>
+        <Link
+          to="/contact"
+          className={`nav-link ${isActive("/contact")}`}
+          onClick={handleLinkClick}
+        >
           Contact Us
         </Link>
-        <Link to="/refer" className={`nav-link ${isActive("/refer")}`} onClick={handleLinkClick}>
+        <Link
+          to="/refer"
+          className={`nav-link ${isActive("/refer")}`}
+          onClick={handleLinkClick}
+        >
           Refer a Friend
         </Link>
       </div>
