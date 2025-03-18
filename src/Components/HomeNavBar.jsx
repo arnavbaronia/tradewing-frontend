@@ -18,6 +18,7 @@ const HomeNavBar = () => {
 
   const handleLinkClick = () => {
     setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" }); 
   };
 
   const scrollToSection = (sectionId) => {
