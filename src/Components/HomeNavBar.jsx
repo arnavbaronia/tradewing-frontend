@@ -11,8 +11,9 @@ const HomeNavBar = () => {
   const isActive = (path) => {
     if (path === "/about" && location.hash === "#about-us") return "active";
     if (path === "/presence" && location.hash === "#our-presence") return "active";
+    if (path === "/courses" && location.hash === "#courses") return "active";
     return location.pathname === path ? "active" : "";
-  };
+  };  
 
   const handleLinkClick = () => {
     setMenuOpen(false);
@@ -76,24 +77,23 @@ const HomeNavBar = () => {
           About
         </span>
         <span
+          className={`nav-link ${isActive("/courses")}`}
+          onClick={() => handleSectionClick("courses")}
+        >
+          Courses
+        </span>
+        <span
           className={`nav-link ${isActive("/presence")}`}
           onClick={() => handleSectionClick("our-presence")}
         >
           Our Presence
         </span>
         <Link
-          to="/services"
-          className={`nav-link ${isActive("/services")}`}
+          to="/reviews"
+          className={`nav-link ${isActive("/reviews")}`}
           onClick={handleLinkClick}
         >
-          Services
-        </Link>
-        <Link
-          to="/testimonials"
-          className={`nav-link ${isActive("/testimonials")}`}
-          onClick={handleLinkClick}
-        >
-          Testimonials
+          Reviews
         </Link>
         <Link
           to="/contact"

@@ -7,6 +7,7 @@ import alokImage from "../assets/papaimage.jpg";
 import logo from "../assets/twlogotransparent.png";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
+import Courses from "./Courses";
 
 const HomePage = () => {
   useEffect(() => {
@@ -175,6 +176,10 @@ const HomePage = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      <div id="courses">
+        <Courses />
       </div>
 
       {/* Our Presence Section */}
