@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../Styles/HomeNavBar.css";
 import { FiMenu } from "react-icons/fi";
+import logo from "../assets/twlogotransparentt.png";
 
 const HomeNavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,11 +50,7 @@ const HomeNavBar = () => {
       {/* Logo */}
       <div className="nav-logo">
         <Link to="/" onClick={handleLinkClick}>
-          <img
-            src={`${process.env.PUBLIC_URL}/twlogotransparent.png`}
-            alt="TradeWing Logo"
-            className="nav-logo-img"
-          />
+          <img src={logo} alt="TradeWing Logo" className="nav-logo-img" />
         </Link>
       </div>
 
