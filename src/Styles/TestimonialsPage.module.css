@@ -1,0 +1,128 @@
+.testimonialsWrapper {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  margin-top: 80px;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: 18px;
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.reviewsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.reviewCard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.reviewCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.avatarContainer {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2c3e50;
+}
+
+.reviewContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.reviewText {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.reviewLink {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+
+.reviewLink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .reviewText {
+    font-size: 14px;
+  }
+
+  .reviewLink {
+    font-size: 12px;
+  }
+}
+
+.starsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: -23px !important;
+}
+
+.starIcon {
+  width: 40px; 
+  height: 40px;
+  color: #f4b400; 
+  margin: 0 4px;
+}
