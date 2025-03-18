@@ -270,3 +270,131 @@
   margin-right: 8px;
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .contactWrapper {
+    padding: 20px;
+    margin: 20px;
+    margin-top: 100px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .input,
+  .textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .formContainer {
+    padding: 20px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contactOptions {
+    gap: 12px;
+  }
+
+  .contactButton {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .notification {
+    left: 50%;
+    top: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .supportLabel {
+    top: 5px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .callButton,
+  .whatsappButton {
+    padding: 10px 16px;
+    font-size: 14px;
+    bottom: 60px;
+  }
+
+  .callIcon,
+  .whatsappIcon {
+    font-size: 18px;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .input,
+  .textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .notification {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .supportLabel {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .callButton,
+  .whatsappButton {
+    font-size: 12px;
+    padding: 8px 14px;
+    bottom: 40px;
+  }
+
+  .callIcon,
+  .whatsappIcon {
+    font-size: 16px;
+  }
+}
