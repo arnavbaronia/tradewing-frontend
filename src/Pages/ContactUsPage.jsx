@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FaLinkedin, FaWhatsapp, FaFacebook, FaPhone, FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { FiPhoneCall } from 'react-icons/fi';
 import styles from '../Styles/ContactUsPage.module.css';
 
 const ContactUsPage = () => {
@@ -57,6 +58,13 @@ const ContactUsPage = () => {
           {notification.message}
         </div>
       )}
+
+      {/* ✅ All India Support Number */}
+      <div className={styles.supportLabel}>
+        <a href="tel:+919028099326">
+            📞 All India Support Number: +91-9028099326
+        </a>
+      </div>
 
       <div className={styles.contactHeader}>
         <h1 className={styles.heading}>Contact Us</h1>
@@ -125,6 +133,17 @@ const ContactUsPage = () => {
           </button>
         </div>
       </div>
+      {/* ✅ Floating Call Button */}
+            <a href="tel:+919028099326" className={styles.callButton}>
+        <FiPhoneCall className={styles.callIcon} />
+        Call Now
+      </a>
+
+      {/* ✅ Floating WhatsApp Button */}
+      <a href="https://wa.me/+919028099326" target="_blank" rel="noopener noreferrer" className={styles.whatsappButton}>
+        <FaWhatsapp className={styles.whatsappIcon} />
+        Chat on WhatsApp
+      </a>
     </div>
   );
 };
