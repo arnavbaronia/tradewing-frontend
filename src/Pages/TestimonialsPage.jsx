@@ -155,7 +155,7 @@ const TestimonialsPage = () => {
         <FaWhatsapp className={styles.whatsappIcon} />
         Chat on WhatsApp
       </a>
-      <div className="home-page-wrapper">
+
       {/* Floating QR Code */}
       <div className="qr-floater" onClick={openPopup}>
         <img src={qrCodeImage} alt="QR Code" className="qr-code" />
@@ -177,7 +177,6 @@ const TestimonialsPage = () => {
           </div>
         </div>
       )}
-      </div>
     </div>
   );
 };
