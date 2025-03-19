@@ -12,11 +12,11 @@ import '../Styles/UPI.css'
 
 const testimonials = [
   {
-    name: 'Amit Gupta',
+    name: 'Vikas Pakhare',
     avatar: client1,
     review:
-      'This trading course exceeded my expectations! The concepts were explained clearly, and the real-world examples made it easy to understand. I feel much more confident in my trading decisions now.',
-    link: 'https://g.co/kgs/mthkkpM',
+      'I must say the teaching is very detailed and professional. Definitely recommended specially for beginners. 5 star well deserved 👏 ✨️✨️✨️✨️✨️',
+    link: 'https://g.co/kgs/cqA8s71',
   },
   {
     name: 'Manasi Gupta',
@@ -26,11 +26,18 @@ const testimonials = [
     link: 'https://g.co/kgs/7XYgk67',
   },
   {
-    name: 'Saket Gupta',
+    name: 'Amit Gupta',
+    avatar: client1,
+    review:
+      'This trading course exceeded my expectations! The concepts were explained clearly, and the real-world examples made it easy to understand. I feel much more confident in my trading decisions now.',
+    link: 'https://g.co/kgs/mthkkpM',
+  },
+  {
+    name: 'Saket Srivastava',
     avatar: client1,
     review:
       'Awesome experience for me. I was guided with correct investment for my profile. Excellent experience of market. That’s good I made correct choice.',
-    link: 'https://g.co/kgs/W6YTvYq',
+    link: 'https://g.co/kgs/SyoapP5',
   },
   {
     name: 'Monika Gupta',
@@ -38,13 +45,6 @@ const testimonials = [
     review:
       'The instructor’s deep knowledge and engaging teaching style made learning enjoyable. He explained complex topics in a simple, easy-to-digest manner. I learned a lot and feel much more confident about my trades.',
     link: 'https://g.co/kgs/aydE4Lu',
-  },
-  {
-    name: 'Vikas Pakhare',
-    avatar: client1,
-    review:
-      'I must say the teaching is very detailed and professional. Definitely recommended specially for beginners. 5 star well deserved 👏 ✨️✨️✨️✨️✨️',
-    link: 'https://g.co/kgs/cqA8s71',
   },
   {
     name: 'Dinesh Bangale',

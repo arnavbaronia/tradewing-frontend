@@ -223,7 +223,7 @@
 
 .callButton {
   position: fixed;
-  bottom: 95px !important; 
+  bottom: 61px !important; 
   right: 20px;
   background-color: #3e34c7;
   color: white;
@@ -232,6 +232,7 @@
   display: flex;
   align-items: center;
   font-size: 16px;
+  font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001; 
   text-decoration: none;
@@ -249,7 +250,7 @@
 
 .whatsappButton {
   position: fixed;
-  bottom: 40px !important; 
+  bottom: 11px !important; 
   right: 20px;
   background-color: #25D366;
   color: white;
@@ -258,6 +259,7 @@
   display: flex;
   align-items: center;
   font-size: 16px;
+  font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; 
   text-decoration: none;
