@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiPhoneCall } from 'react-icons/fi';
@@ -7,6 +7,8 @@ import client1 from '../assets/client1.png';
 import client2 from '../assets/client2.png';
 import dollarImage from '../assets/dollar.png';
 import rupeeImage from '../assets/rupee.png';
+import qrCodeImage from "../assets/qrtest.jpg";
+import '../Styles/UPI.css'
 
 const testimonials = [
   {
@@ -54,6 +56,10 @@ const testimonials = [
 ];
 
 const TestimonialsPage = () => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+    const openPopup = () => setIsPopupOpen(true);
+    const closePopup = () => setIsPopupOpen(false);
   useEffect(() => {
     const createFallingImages = () => {
       const container = document.querySelector(`.${styles.fallingImages}`);
@@ -149,6 +155,29 @@ const TestimonialsPage = () => {
         <FaWhatsapp className={styles.whatsappIcon} />
         Chat on WhatsApp
       </a>
+      <div className="home-page-wrapper">
+      {/* Floating QR Code */}
+      <div className="qr-floater" onClick={openPopup}>
+        <img src={qrCodeImage} alt="QR Code" className="qr-code" />
+        <div className="price-label">
+          <span className="old-price">₹15,000</span>
+          <span className="new-price">₹12,000</span>
+          <span className="book-now">Book Your Slot Now</span>
+        </div>
+      </div>
+
+      {/* Popup */}
+      {isPopupOpen && (
+        <div className="popup-overlay" onClick={closePopup}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={closePopup}>
+              ✕
+            </button>
+            <img src={qrCodeImage} alt="QR Code" className="popup-qr" />
+          </div>
+        </div>
+      )}
+      </div>
     </div>
   );
 };

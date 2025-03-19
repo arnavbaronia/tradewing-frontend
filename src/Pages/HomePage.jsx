@@ -1,15 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/HomePage.css";
 import stockImage from "../assets/stockhome.png";
 import dollarImage from "../assets/dollar.png";
 import rupeeImage from "../assets/rupee.png";
 import alokImage from "../assets/papaimage.jpg";
 import logo from "../assets/twlogotransparent.png";
+import qrCodeImage from "../assets/qrtest.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import Courses from "./Courses";
 
 const HomePage = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
   useEffect(() => {
     const createFallingImages = () => {
       const container = document.querySelector(".falling-images");
@@ -24,7 +29,6 @@ const HomePage = () => {
         container.appendChild(img);
       }
     };
-
     createFallingImages();
 
     return () => {
@@ -248,6 +252,28 @@ const HomePage = () => {
         <FaWhatsapp className="whatsapp-icon" />
         Chat on WhatsApp
       </a>
+
+      {/* Floating QR Code */}
+      <div className="qr-floater" onClick={openPopup}>
+        <img src={qrCodeImage} alt="QR Code" className="qr-code" />
+        <div className="price-label">
+          <span className="old-price">₹15,000</span>
+          <span className="new-price">₹12,000</span>
+          <span className="book-now">Book Your Slot Now</span>
+        </div>
+      </div>
+
+      {/* Popup */}
+      {isPopupOpen && (
+        <div className="popup-overlay" onClick={closePopup}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={closePopup}>
+              ✕
+            </button>
+            <img src={qrCodeImage} alt="QR Code" className="popup-qr" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
