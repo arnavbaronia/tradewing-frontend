@@ -21,6 +21,14 @@ function App() {
       }
     }
   }, [location]);
+  
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'G-PH24JWXD38', {
+        page_path: location.pathname,
+      });
+    }
+  }, [location]);
 
   return (
     <div className="App">
