@@ -55,30 +55,8 @@ const HomePage = () => {
         <div className="home-content">
           <h1 className="main-title">Trade Wing Trading Academy – Online Stock Trading Classes</h1>
           <p className="description">
-            Trade Wing Trading Academy is a premier online learning platform dedicated to training individuals in stock market trading. The academy offers structured courses from basics to advanced levels, empowering learners with time-tested technical analysis tools to make informed trading decisions.
+          Trade Wing Trading Academy is a premier online platform offering structured stock market courses from basics to advanced levels, empowering learners with proven technical analysis tools for informed trading. Led by Alok Baronia, a seasoned trader with 25 years of experience, the academy provides a comprehensive curriculum, flexible weekend classes, real-world insights, and ongoing mentorship to help students learn, earn, and grow.
           </p>
-          <div className="key-features">
-            <div className="feature-item">
-              ✅ <strong>Comprehensive Curriculum </strong>
-              <span> : Covers stock market fundamentals, technical analysis, and trading strategies.</span>
-            </div>
-            <div className="feature-item">
-              ✅ <strong>Weekend Online Classes </strong>
-              <span> : Flexible learning for professionals and beginners.</span>
-            </div>
-            <div className="feature-item">
-              ✅ <strong>Expert Guidance </strong>
-              <span> : Led by Alok Baronia, a seasoned trader with 25 years of experience in banking, investments, and financial markets.</span>
-            </div>
-            <div className="feature-item">
-              ✅ <strong>Real-World Insights </strong>
-              <span> : Practical application of trading techniques for consistent success.</span>
-            </div>
-            <div className="feature-item">
-              ✅ <strong>Ongoing Mentorship </strong>
-              <span> : Continuous support to help students learn, earn, and grow.</span>
-            </div>
-          </div>
         </div>
         <div className="home-image">
           <img src={stockImage} alt="Stock Market" className="stock-img" />
