@@ -69,8 +69,8 @@ const ContactUsPage = () => {
         <h1 className={styles.heading}>Contact Us</h1>
         <p className={styles.subheading}>Reach out to me!</p>
         <p className={styles.description}>
-          Please provide your details in the form on the left, and I will respond to your inquiry without delay.  
-          You may also reach out to me on the platforms mentioned on the right-hand side.
+          We welcome you to Trade Wing Trading Academy!
+          In case of any queries, please feel free to call us or write to us.
         </p>
       </div>
 
