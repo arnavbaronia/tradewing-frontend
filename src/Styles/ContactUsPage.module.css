@@ -221,6 +221,16 @@
   color: #063970;
 }
 
+@media (max-width: 768px) {
+  .supportLabel {
+    top: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-top: 60px;
+    transform: translateX(-16%);
+  }
+}
+
 .callButton {
   position: fixed;
   bottom: 60px !important; 
@@ -279,7 +289,7 @@
   .contactWrapper {
     padding: 20px;
     margin: 20px;
-    margin-top: 100px;
+    margin-top: 150px;
   }
 
   .heading {
@@ -335,13 +345,6 @@
     font-size: 14px;
   }
 
-  .supportLabel {
-    top: 5px;
-    right: 10px;
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-
   .callButton,
   .whatsappButton {
     padding: 10px 16px;
@@ -383,11 +386,6 @@
   .notification {
     font-size: 12px;
     padding: 8px 12px;
-  }
-
-  .supportLabel {
-    font-size: 12px;
-    padding: 4px 10px;
   }
 
   .callButton {

@@ -152,6 +152,16 @@
   color: #063970;
 }
 
+@media (max-width: 768px) {
+  .supportLabel {
+    top: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-top: 60px;
+    transform: translateX(-16%);
+  }
+}
+
 .fallingImages {
   position: fixed;
   top: 0;

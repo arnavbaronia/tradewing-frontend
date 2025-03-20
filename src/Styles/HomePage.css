@@ -116,6 +116,16 @@ body {
   color: #063970;
 }
 
+@media (max-width: 768px) {
+  .support-label {
+    top: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-top: 60px;
+    transform: translateX(-16%);
+  }
+}
+
 .call-button {
   position: fixed;
   bottom: 60px;
