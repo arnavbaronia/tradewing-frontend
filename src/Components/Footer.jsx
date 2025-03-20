@@ -38,9 +38,9 @@ const Footer = () => {
           <ul>
             <li><a href="/">Our Mission</a></li>
             <li><a href="/">Meet the Team</a></li>
-            <li><a href="/terms">Privacy Policy</a></li>
-            <li><a href="/terms">Terms and Conditions</a></li>
-            <li><a href="/refund-policy">Refund Policy</a></li>
+            <li><a href="/">Privacy Policy</a></li>
+            <li><a href="/">Terms and Conditions</a></li>
+            <li><a href="/">Refund Policy</a></li>
             <li><a href="/">Blog</a></li>
           </ul>
         </div>
