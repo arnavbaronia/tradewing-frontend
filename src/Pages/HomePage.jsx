@@ -53,7 +53,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <div className="home-page">
         <div className="home-content">
-          <h1 className="main-title">Trade Wing Trading Academy – Online Stock Trading Classes</h1>
+          <h1 className="main-title">Trade Wing Trading Academy Online Stock Trading Classes</h1>
           <p className="description">
           Trade Wing Trading Academy is a premier online platform offering structured stock market courses from basics to advanced levels, empowering learners with proven technical analysis tools for informed trading. Led by Alok Baronia, a seasoned trader with 25 years of experience, the academy provides a comprehensive curriculum, flexible weekend classes, real-world insights, and ongoing mentorship to help students learn, earn, and grow.
           </p>
@@ -91,25 +91,13 @@ const HomePage = () => {
 
             <div className="about-section">
               <h3 className="section-heading">What We Offer</h3>
-              <ul className="about-list">
-                <li>
-                  ✅ Comprehensive Training Programs – Basics to advanced analysis.
-                </li>
-                <li>
-                  ✅ Technical Analysis Mastery – Deep dive into chart patterns.
-                </li>
-                <li>
-                  ✅ Live Market Learning – Real-time practice and insights.
-                </li>
-                <li>
-                  ✅ Risk Management & Psychology – Minimize risks, maximize gains.
-                </li>
-                <li>
-                  ✅ Personalized Mentorship – Direct guidance from Alok Baronia.
-                </li>
-                <li>
-                  ✅ Weekend Online Classes – Flexible for working professionals.
-                </li>
+              <ul className="about-list offer-list">
+                <li>Comprehensive Training Programs – Basics to advanced analysis.</li>
+                <li>Technical Analysis Mastery – Deep dive into chart patterns.</li>
+                <li>Live Market Learning – Real-time practice and insights.</li>
+                <li>Risk Management & Psychology – Minimize risks, maximize gains.</li>
+                <li>Personalized Mentorship – Direct guidance from Alok Baronia.</li>
+                <li>Weekend Online Classes – Flexible for working professionals.</li>
               </ul>
             </div>
 

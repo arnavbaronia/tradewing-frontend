@@ -23,7 +23,7 @@ body {
 }
 
 .main-title {
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 700;
   color: black;
   margin-bottom: 10px;
@@ -37,8 +37,9 @@ body {
 }
 
 .description {
-  font-size: 18px;
-  color: #777;
+  font-size: 20px;
+  color: #333;
+  text-decoration: solid !important;
   line-height: 1.6;
   margin-bottom: 30px;
 }
@@ -254,7 +255,7 @@ body {
 
 .about-text,
 .about-list li {
-  font-size: 16px;
+  font-size: 19px;
   color: #555;
   line-height: 1.6;
 }
@@ -264,12 +265,20 @@ body {
   padding: 0;
 }
 
+.offer-list li::before {
+  content: '➤'; 
+  color: #4CAF50; 
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
 .about-list li {
   padding: 10px;
   background: #ecf0f1;
   border-radius: 12px;
   margin-bottom: 8px;
   transition: background 0.3s ease;
+  text-align: left;
 }
 
 .about-list li:hover {

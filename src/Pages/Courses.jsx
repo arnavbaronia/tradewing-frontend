@@ -6,23 +6,35 @@ const Courses = () => {
   const courses = [
     {
       icon: <FaChartLine className="course-icon" />,
-      title: "Level 1: Stock Market Basic to Advanced",
+      title: (
+        <>
+          <span className="course-level">Level 1:</span> Stock Market Basic to Advanced
+        </>
+      ),
       description:
         "Master the essentials of stock market trading. Learn fundamental concepts, technical analysis, and strategies to start your trading journey.",
     },
     {
       icon: <FaCoins className="course-icon" />,
-      title: "Level 2: F & O Beginners to Pro Traders",
+      title: (
+        <>
+          <span className="course-level">Level 2:</span> F & O Beginners to Pro Traders
+        </>
+      ),
       description:
         "Dive deep into Futures and Options trading. Understand derivatives, strategies, and risk management to trade like a pro.",
     },
     {
       icon: <FaGraduationCap className="course-icon" />,
-      title: "Level 3: Master Classes",
+      title: (
+        <>
+          <span className="course-level">Level 3:</span> Master Classes
+        </>
+      ),
       description:
         "Exclusive master classes with industry experts. Learn advanced techniques, market psychology, and professional trading tactics.",
     },
-  ];
+  ];  
 
   return (
     <div className="courses-container">

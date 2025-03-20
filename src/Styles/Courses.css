@@ -41,7 +41,13 @@
 
 .course-icon {
   font-size: 36px;
-  color: #4f8cd5;
+  color: #cf2b0a;
+}
+
+.course-level {
+  font-size: 24px; 
+  font-weight: 700; 
+  color: #cf2b0a; 
 }
 
 .course-title {
