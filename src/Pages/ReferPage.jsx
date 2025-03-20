@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { FiPhoneCall } from 'react-icons/fi';
 import styles from '../Styles/ContactUsPage.module.css';
 import qrCodeImage from "../assets/qrtest.jpg";
-import '../Styles/UPI.css'
+import '../Styles/UPI.css';
 
 const ReferFriendPage = () => {
   const [formData, setFormData] = useState({
@@ -16,10 +16,6 @@ const ReferFriendPage = () => {
   });
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  
-  const openPopup = () => setIsPopupOpen(true);
-  const closePopup = () => setIsPopupOpen(false);
-
   const [notification, setNotification] = useState({ message: '', type: '' });
 
   const handleChange = (e) => {
@@ -29,11 +25,20 @@ const ReferFriendPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const emailData = {
+      from_name: formData.yourName,
+      to_name: "Alok Baronia",
+      friend_name: formData.friendName,
+      friend_email: formData.friendEmail,
+      friend_phone: formData.friendPhone,
+      message: formData.message
+    };
+
     emailjs
       .send(
         "service_3wn9fwn",
-        "template_r6o1ld5",
-        formData,
+        "template_2r7wvyh",
+        emailData,
         "e3WBukrIPyg3IFN-T"
       )
       .then(
@@ -54,7 +59,7 @@ const ReferFriendPage = () => {
 
   return (
     <div className={styles.contactWrapper}>
-      {/* Notification */}
+      {/* ✅ Notification */}
       {notification.message && (
         <div className={`${styles.notification} ${styles[notification.type]}`}>
           {notification.message}
@@ -64,11 +69,11 @@ const ReferFriendPage = () => {
       {/* ✅ All India Support Number */}
       <div className={styles.supportLabel}>
         <a href="tel:+919028099326">
-            📞 All India Support Number: +91-9028099326
+          📞 All India Support Number: +91-9028099326
         </a>
       </div>
 
-      {/* Header */}
+      {/* ✅ Header */}
       <div className={styles.contactHeader}>
         <h1 className={styles.heading}>Refer a Friend</h1>
         <p className={styles.subheading}>Help your friends get started!</p>
@@ -77,11 +82,11 @@ const ReferFriendPage = () => {
         </p>
       </div>
 
-      {/* Form */}
+      {/* ✅ Form */}
       <div className={styles.contactContainer}>
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
-            {/* Name Row */}
+            {/* ✅ Name Row */}
             <div className={styles.row}>
               <input
                 type="text"
@@ -103,7 +108,7 @@ const ReferFriendPage = () => {
               />
             </div>
 
-            {/* Email and Phone Row */}
+            {/* ✅ Email and Phone Row */}
             <div className={styles.row}>
               <input
                 type="email"
@@ -125,6 +130,7 @@ const ReferFriendPage = () => {
               />
             </div>
 
+            {/* ✅ Message */}
             <textarea
               name="message"
               placeholder="Add a personal message (optional)"
@@ -132,6 +138,8 @@ const ReferFriendPage = () => {
               onChange={handleChange}
               className={styles.textarea}
             />
+            
+            {/* ✅ Submit Button */}
             <button type="submit" className={styles.button}>
               Send Referral
             </button>
@@ -151,8 +159,8 @@ const ReferFriendPage = () => {
         Chat on WhatsApp
       </a>
 
-      {/* Floating QR Code */}
-      <div className="qr-floater" onClick={openPopup}>
+      {/* ✅ Floating QR Code */}
+      <div className="qr-floater" onClick={() => setIsPopupOpen(true)}>
         <img src={qrCodeImage} alt="QR Code" className="qr-code" />
         <div className="price-label">
           <span className="old-price">₹16,000</span>
@@ -161,13 +169,11 @@ const ReferFriendPage = () => {
         </div>
       </div>
 
-      {/* Popup */}
+      {/* ✅ QR Code Popup */}
       {isPopupOpen && (
-        <div className="popup-overlay" onClick={closePopup}>
+        <div className="popup-overlay" onClick={() => setIsPopupOpen(false)}>
           <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closePopup}>
-              ✕
-            </button>
+            <button className="close-button" onClick={() => setIsPopupOpen(false)}>✕</button>
             <img src={qrCodeImage} alt="QR Code" className="popup-qr" />
           </div>
         </div>

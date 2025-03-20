@@ -27,29 +27,40 @@ const ContactUsPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
+    const formattedMessage = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Contact Number: ${formData.contactNumber}
+      Message: ${formData.message}
+    `;
+  
     emailjs
       .send(
         "service_3wn9fwn",
         "template_r6o1ld5",
-        formData,
+        {
+          to_name: "Alok Baronia", 
+          from_name: formData.name,
+          message: formattedMessage, 
+        },
         "e3WBukrIPyg3IFN-T"
       )
       .then(
         () => {
           setNotification({ message: 'Message sent successfully!', type: 'success' });
           setFormData({ name: '', email: '', contactNumber: '', message: '' });
-
+  
           setTimeout(() => setNotification({ message: '', type: '' }), 3000);
         },
         (error) => {
           setNotification({ message: 'Failed to send message. Please try again.', type: 'error' });
           console.error('EmailJS Error:', error);
-
+  
           setTimeout(() => setNotification({ message: '', type: '' }), 3000);
         }
       );
-  };
+  };  
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('alokbaronia@yahoo.com');
