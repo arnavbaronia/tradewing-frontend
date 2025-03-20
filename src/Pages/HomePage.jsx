@@ -6,15 +6,27 @@ import rupeeImage from "../assets/rupee.png";
 import alokImage from "../assets/papaimage.jpg";
 import logo from "../assets/twlogotransparent.png";
 import qrCodeImage from "../assets/qrtest.jpg";
+import bullImage from "../assets/bull.png";
+import bearImage from "../assets/bear.png";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import Courses from "./Courses";
 
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  
   const openPopup = () => setIsPopupOpen(true);
   const closePopup = () => setIsPopupOpen(false);
+  const [showFightAnimation, setShowFightAnimation] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowFightAnimation(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const createFallingImages = () => {
       const container = document.querySelector(".falling-images");
@@ -47,6 +59,14 @@ const HomePage = () => {
         📞 All India Support Number: +91-9028099326
       </a>
       </div>
+      
+      {showFightAnimation && (
+        <div className="fight-animation">
+          <img src={bullImage} alt="Bull" className="bull" />
+          <img src={bearImage} alt="Bear" className="bear" />
+        </div>
+      )}
+
       {/* Falling Images */}
       <div className="falling-images"></div>
 
