@@ -157,17 +157,17 @@ const TestimonialsPage = () => {
       </a>
 
       {/* Floating QR Code */}
-      <div className="qr-floater" onClick={openPopup}>
+      {/* <div className="qr-floater" onClick={openPopup}>
         <img src={qrCodeImage} alt="QR Code" className="qr-code" />
         <div className="price-label">
           <span className="old-price">₹16,000</span>
           <span className="new-price">₹12,500</span>
           <span className="book-now">Book Your Slot Now</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Popup */}
-      {isPopupOpen && (
+      {/* {isPopupOpen && (
         <div className="popup-overlay" onClick={closePopup}>
           <div className="popup-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={closePopup}>
@@ -176,7 +176,7 @@ const TestimonialsPage = () => {
             <img src={qrCodeImage} alt="QR Code" className="popup-qr" />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
