@@ -13,10 +13,10 @@ import { FiPhoneCall } from "react-icons/fi";
 import Courses from "./Courses";
 
 const HomePage = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  // const [isPopupOpen, setIsPopupOpen] = useState(false);
   
-  const openPopup = () => setIsPopupOpen(true);
-  const closePopup = () => setIsPopupOpen(false);
+  // const openPopup = () => setIsPopupOpen(true);
+  // const closePopup = () => setIsPopupOpen(false);
   const [showFightAnimation, setShowFightAnimation] = useState(true);
 
   useEffect(() => {
@@ -184,6 +184,17 @@ const HomePage = () => {
 
       <div id="courses">
         <Courses />
+      </div>
+
+      <div id="payments" className="payment-container">
+        <h2 className="payment-heading">Secure Your Spot Now!</h2>
+        <p className="payment-description">
+          Reserve your spot in our upcoming stock market course by scanning the QR code below.  
+          Don’t miss this opportunity to learn from the best and enhance your trading skills!
+        </p>
+        <div className="qr-code-wrapper">
+          <img src={qrCodeImage} alt="QR Code" className="qr-code-img" />
+        </div>
       </div>
 
       {/* Our Presence Section */}

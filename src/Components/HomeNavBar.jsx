@@ -81,6 +81,12 @@ const HomeNavBar = () => {
           Courses
         </span>
         <span
+          className={`nav-link ${isActive("/payments")}`}
+          onClick={() => handleSectionClick("payments")}
+        >
+          Payments
+        </span>
+        <span
           className={`nav-link ${isActive("/presence")}`}
           onClick={() => handleSectionClick("our-presence")}
         >

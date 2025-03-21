@@ -7,7 +7,7 @@ import client1 from '../assets/client1.png';
 import client2 from '../assets/client2.png';
 import dollarImage from '../assets/dollar.png';
 import rupeeImage from '../assets/rupee.png';
-import qrCodeImage from "../assets/qrtest.jpg";
+// import qrCodeImage from "../assets/qrtest.jpg";
 import '../Styles/UPI.css'
 
 const testimonials = [
@@ -56,10 +56,10 @@ const testimonials = [
 ];
 
 const TestimonialsPage = () => {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    // const [isPopupOpen, setIsPopupOpen] = useState(false);
   
-    const openPopup = () => setIsPopupOpen(true);
-    const closePopup = () => setIsPopupOpen(false);
+    // const openPopup = () => setIsPopupOpen(true);
+    // const closePopup = () => setIsPopupOpen(false);
   useEffect(() => {
     const createFallingImages = () => {
       const container = document.querySelector(`.${styles.fallingImages}`);

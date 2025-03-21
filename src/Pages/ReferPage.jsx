@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiPhoneCall } from 'react-icons/fi';
 import styles from '../Styles/ContactUsPage.module.css';
-import qrCodeImage from "../assets/qrtest.jpg";
+// import qrCodeImage from "../assets/qrtest.jpg";
 import '../Styles/UPI.css';
 
 const ReferFriendPage = () => {
@@ -15,7 +15,7 @@ const ReferFriendPage = () => {
     message: ''
   });
 
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  // const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [notification, setNotification] = useState({ message: '', type: '' });
 
   const handleChange = (e) => {
