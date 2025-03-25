@@ -108,6 +108,20 @@ body {
   color: #DFF6FF;
 }
 
+.nav-buttons .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.nav-buttons .nav-icon {
+  font-size: 28px;
+}
+
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
